@@ -29,7 +29,7 @@ $HOME/sratoolkit.2.11.0-centos_linux64/bin/fastq-dump --split-files -X 91000000 
 ```
 
 
-Before starting with the data analysis we will first chop the data up into chinks of one million reads. This simply uses the (`split`) command which splits the input fastq files every four million lines (`split -l 4000000`). Being as each *read* has four lines per fastq file, this will split into chunks of one million reads. Besides this we use a (`for`) loop to iterate over all files and make sub-folders ((`mkdir`)). In case you're wondering I use my prefered method of having the loops (`echo`) the commands, so I can check them before passing ((`|`)) them to shell ((`sh`))
+Before starting with the data analysis we will first chop the data up into chunks of one million reads. This simply uses the (`split`) command which splits the input fastq files every four million lines (`split -l 4000000`). Being as each *read* has four lines per fastq file, this will split into chunks of one million reads. Besides this we use a (`for`) loop to iterate over all files and make sub-folders ((`mkdir`)). In case you're wondering I use my prefered method of having the loops (`echo`) the commands, so I can check them before passing ((`|`)) them to shell ((`sh`))
 
 ```
 mkdir SPLIT
